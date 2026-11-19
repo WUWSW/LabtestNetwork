@@ -141,11 +141,17 @@ class AutomationWorker:
         logger.info(f"Configuration successfully deployed to {device_id}!")
         
         # 5. Automated OSPF Verification (Task 8)
-        # Give OSPF a short time (5-10s) to discover neighbor if both routers are coming up
-        logger.info(f"Waiting 8 seconds for OSPF adjacency convergence before verification...")
-        time.sleep(8)
-        
+        # Poll for convergence: check up to 3 times
+        logger.info(f"Checking OSPF verification on {device_id}...")
+        time.sleep(4)
         verify_res = self.verifier.verify_router(device_id, mgmt_ip)
+        
+        retries = 3
+        while not verify_res.get("passed", False) and retries > 0:
+            time.sleep(4)
+            verify_res = self.verifier.verify_router(device_id, mgmt_ip)
+            retries -= 1
+
         verification_log = verify_res.get("report_summary", "")
         v_passed = verify_res.get("passed", False)
         v_status = "PASSED" if v_passed else "FAILED"
@@ -160,6 +166,25 @@ class AutomationWorker:
             verification_status=v_status
         )
         logger.info(f"==> Finished Job {job_id} for {device_id}. Verification: {v_status}")
+
+        # 7. Auto re-verify all previous jobs in this proposal so both R1 and R2 become PASSED
+        self._reverify_proposal_jobs(job_data.get("proposal_id"))
+
+    def _reverify_proposal_jobs(self, proposal_id: str):
+        if not proposal_id:
+            return
+        try:
+            resp = requests.get(f"{BACKEND_URL}/api/jobs", timeout=5)
+            if resp.status_code == 200:
+                jobs = resp.json()
+                proposal_jobs = [j for j in jobs if j.get("proposal_id") == proposal_id and j.get("verification_status") != "PASSED"]
+                if proposal_jobs:
+                    logger.info(f"Auto re-verifying {len(proposal_jobs)} pending routers in proposal {proposal_id}...")
+                    time.sleep(5)
+                    for pj in proposal_jobs:
+                        requests.post(f"{BACKEND_URL}/api/jobs/{pj['job_id']}/reverify", timeout=10)
+        except Exception as e:
+            logger.warning(f"Auto-reverify proposal jobs error: {e}")
 
     def run(self):
         logger.info("Starting Python Automation Worker...")

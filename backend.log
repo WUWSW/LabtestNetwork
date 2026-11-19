@@ -1,7 +1,7 @@
-2026-11-12 14:08:19,257 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-2026-11-12 14:08:19,257 [INFO] (Backend) Probing node bootstrap-0 broker version
-2026-11-12 14:08:19,258 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
-2026-11-12 14:08:19,358 [ERROR] (Backend) Error sending request data to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
+2026-11-19 14:39:27,938 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:27,938 [INFO] (Backend) Probing node bootstrap-0 broker version
+2026-11-19 14:39:27,939 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:28,040 [ERROR] (Backend) Error sending request data to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
 Traceback (most recent call last):
   File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 752, in send_pending_requests
     total_bytes = self._send_bytes_blocking(data)
@@ -10,358 +10,208 @@ Traceback (most recent call last):
     sent_bytes = self._sock.send(data[total_sent:])
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 BrokenPipeError: [Errno 32] Broken pipe
-2026-11-12 14:08:19,360 [ERROR] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: [Errno 32] Broken pipe
-2026-11-12 14:08:19,360 [ERROR] (Backend) Failed to connect Kafka Producer to localhost:9092: Invalid file object: None
-INFO:     Started server process [14634]
+2026-11-19 14:39:28,042 [ERROR] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: [Errno 32] Broken pipe
+2026-11-19 14:39:28,042 [ERROR] (Backend) Failed to connect Kafka Producer to localhost:9092: Invalid file object: None
+INFO:     Started server process [7380]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:34654 - "GET / HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /static/app.js HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /favicon.ico HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:34654 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:44190 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56500 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56500 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56500 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56500 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56500 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56500 - "GET /api/jobs HTTP/1.1" 200 OK
-2026-11-12 14:11:14,033 [INFO] (Backend) Received diagram upload: topology_diagram.png -> /home/gus/Desktop/Lab test Network/uploads/7e4aaf4a_topology_diagram.png
-2026-11-12 14:11:14,034 [INFO] (Backend) Using Built-in Deterministic AI Vision Analyzer for Lab Exam Diagram.
-INFO:     127.0.0.1:56500 - "POST /api/upload HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40702 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:41612 - "GET /api/jobs HTTP/1.1" 200 OK
-2026-11-12 14:13:31,815 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-2026-11-12 14:13:31,815 [INFO] (Backend) Probing node bootstrap-0 broker version
-2026-11-12 14:13:31,815 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
-2026-11-12 14:13:31,918 [INFO] (Backend) Broker version identified as 2.6.0
-2026-11-12 14:13:31,918 [INFO] (Backend) Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
-2026-11-12 14:13:31,921 [INFO] (Backend) Kafka Producer connected to localhost:9092, target topic: network-config-jobs
-2026-11-12 14:13:32,074 [INFO] (Backend) <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
-2026-11-12 14:13:32,074 [INFO] (Backend) <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
-2026-11-12 14:13:32,074 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
-2026-11-12 14:13:32,202 [INFO] (Backend) Job JOB-7e4aaf4a-R1-d401 for R1 sent to topic network-config-jobs partition 0 offset 0
-2026-11-12 14:13:32,216 [INFO] (Backend) Job JOB-7e4aaf4a-R2-2c58 for R2 sent to topic network-config-jobs partition 0 offset 1
-INFO:     127.0.0.1:41612 - "POST /api/proposals/7e4aaf4a/approve-and-deploy HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53304 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50108 - "GET /api/jobs/JOB-7e4aaf4a-R1-d401/approval-status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50118 - "POST /api/jobs/JOB-7e4aaf4a-R1-d401/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55750 - "POST /api/jobs/JOB-7e4aaf4a-R1-d401/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55752 - "GET /api/jobs/JOB-7e4aaf4a-R2-2c58/approval-status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55760 - "POST /api/jobs/JOB-7e4aaf4a-R2-2c58/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:43838 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55436 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58994 - "POST /api/jobs/JOB-7e4aaf4a-R2-2c58/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58998 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-2026-11-12 14:24:02,500 [INFO] (Backend) Running automated OSPF verification on R1 (192.168.122.111)...
-2026-11-12 14:24:11,721 [INFO] (Backend) === OSPF VERIFICATION REPORT FOR R1 (192.168.122.111) ===
-1. OSPF Neighbor FULL Adjacency: [FAILED] No FULL neighbor detected
-   - Expected Neighbor Router ID: 2.2.2.2 (Not Found)
-2. Remote LAN Learned via OSPF: [FAILED] Remote LAN route missing
-3. OSPF Process & Router-ID: [WARNING] Protocol check: OSPF=False ID=False
-   - Passive Interface Configured: No
-Overall Verification Status: PENDING/FAILED
+INFO:     127.0.0.1:51780 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51780 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51780 - "GET /api/jobs HTTP/1.1" 200 OK
+2026-11-19 14:40:02,759 [INFO] (Backend) Received diagram upload: Screenshot from 2026-11-19 12-56-17.png -> /home/gus/Desktop/Lab test Network/uploads/7e573f6a_Screenshot from 2026-11-19 12-56-17.png
+2026-11-19 14:40:02,759 [INFO] (Backend) Using Built-in Deterministic AI Vision Analyzer for Lab Exam Diagram.
+INFO:     127.0.0.1:51780 - "POST /api/upload HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+2026-11-19 14:40:13,263 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:40:13,264 [INFO] (Backend) Probing node bootstrap-0 broker version
+2026-11-19 14:40:13,264 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:40:13,367 [INFO] (Backend) Broker version identified as 2.6.0
+2026-11-19 14:40:13,367 [INFO] (Backend) Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+2026-11-19 14:40:13,369 [INFO] (Backend) Kafka Producer connected to localhost:9092, target topic: network-config-jobs
+2026-11-19 14:40:13,374 [INFO] (Backend) <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:40:13,375 [INFO] (Backend) <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:40:13,375 [INFO] (Backend) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2026-11-19 14:40:13,384 [INFO] (Backend) Job JOB-7e573f6a-R1-0e0c for R1 sent to topic network-config-jobs partition 0 offset 2
+2026-11-19 14:40:13,401 [INFO] (Backend) Job JOB-7e573f6a-R2-97a5 for R2 sent to topic network-config-jobs partition 0 offset 3
+INFO:     127.0.0.1:51784 - "POST /api/proposals/7e573f6a/approve-and-deploy HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44504 - "GET /api/jobs/JOB-7e573f6a-R1-0e0c/approval-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44506 - "POST /api/jobs/JOB-7e573f6a-R1-0e0c/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36980 - "POST /api/jobs/JOB-7e573f6a-R1-0e0c/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36992 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51784 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+2026-11-19 14:40:32,924 [INFO] (Backend) Running automated OSPF verification on R2 (192.168.122.102)...
+2026-11-19 14:40:39,424 [INFO] (Backend) === OSPF VERIFICATION REPORT FOR R2 (192.168.122.102) ===
+1. OSPF Neighbor FULL Adjacency: [PASSED] Neighbor state is FULL
+   - Expected Neighbor Router ID: 1.1.1.1 (Found)
+2. Remote LAN Learned via OSPF: [PASSED] Route to 10.0.0.0/24 present
+3. OSPF Process & Router-ID: [PASSED] OSPF 1 active with ID 2.2.2.2
+   - Passive Interface Configured: Yes
+Overall Verification Status: PASSED
 ============================================================
-INFO:     127.0.0.1:40988 - "POST /api/jobs/JOB-7e4aaf4a-R1-d401/reverify HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54750 - "GET /api/jobs HTTP/1.1" 200 OK
-2026-11-12 14:24:11,738 [INFO] (Backend) Running automated OSPF verification on R2 (192.168.122.102)...
-2026-11-12 14:24:20,937 [INFO] (Backend) === OSPF VERIFICATION REPORT FOR R2 (192.168.122.102) ===
-1. OSPF Neighbor FULL Adjacency: [FAILED] No FULL neighbor detected
-   - Expected Neighbor Router ID: 1.1.1.1 (Not Found)
-2. Remote LAN Learned via OSPF: [FAILED] Remote LAN route missing
-3. OSPF Process & Router-ID: [WARNING] Protocol check: OSPF=False ID=False
-   - Passive Interface Configured: No
-Overall Verification Status: PENDING/FAILED
-============================================================
-INFO:     127.0.0.1:54762 - "POST /api/jobs/JOB-7e4aaf4a-R2-2c58/reverify HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54750 - "GET /api/jobs HTTP/1.1" 200 OK
-2026-11-12 14:24:20,969 [INFO] (Backend) Job JOB-7e4aaf4a-R1-ffcb for R1 sent to topic network-config-jobs partition 0 offset 2
-2026-11-12 14:24:20,987 [INFO] (Backend) Job JOB-7e4aaf4a-R2-73fc for R2 sent to topic network-config-jobs partition 0 offset 3
-INFO:     127.0.0.1:40988 - "POST /api/proposals/7e4aaf4a/approve-and-deploy HTTP/1.1" 200 OK
-2026-11-12 14:24:21,000 [INFO] (Backend) Running automated OSPF verification on R1 (192.168.122.111)...
-2026-11-12 14:24:30,219 [INFO] (Backend) === OSPF VERIFICATION REPORT FOR R1 (192.168.122.111) ===
-1. OSPF Neighbor FULL Adjacency: [FAILED] No FULL neighbor detected
-   - Expected Neighbor Router ID: 2.2.2.2 (Not Found)
-2. Remote LAN Learned via OSPF: [FAILED] Remote LAN route missing
-3. OSPF Process & Router-ID: [WARNING] Protocol check: OSPF=False ID=False
-   - Passive Interface Configured: No
-Overall Verification Status: PENDING/FAILED
-============================================================
-INFO:     127.0.0.1:54772 - "POST /api/jobs/test_job_01/reverify HTTP/1.1" 200 OK
-INFO:     127.0.0.1:40988 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54762 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33132 - "GET /api/jobs/test_job_01 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:38070 - "GET /api/jobs/JOB-7e4aaf4a-R1-ffcb/approval-status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50494 - "POST /api/jobs/JOB-7e4aaf4a-R1-ffcb/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:33132 - "GET /api/jobs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50496 - "GET /api/jobs/JOB-7e4aaf4a-R2-73fc/approval-status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50500 - "POST /api/jobs/JOB-7e4aaf4a-R2-73fc/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57410 - "POST /api/jobs/JOB-7e4aaf4a-R2-73fc/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37012 - "POST /api/jobs/JOB-7e573f6a-R2-97a5/reverify HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57506 - "GET /api/jobs/JOB-7e573f6a-R2-97a5/approval-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57510 - "POST /api/jobs/JOB-7e573f6a-R2-97a5/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33632 - "POST /api/jobs/JOB-7e573f6a-R2-97a5/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33646 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37006 - "GET /api/jobs HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7380]

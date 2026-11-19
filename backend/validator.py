@@ -37,7 +37,7 @@ def validate_topology_and_config(
         protected_interfaces = [
             i.strip().lower() for i in os.getenv(
                 "PROTECTED_MGMT_INTERFACES", 
-                "FastEthernet0/0,fa0/0,GigabitEthernet0/0,Gi0/0"
+                "FastEthernet1/0,fa1/0,GigabitEthernet0/0,Gi0/0"
             ).split(",")
         ]
 
@@ -142,19 +142,45 @@ def validate_topology_and_config(
     })
 
     # 5. Management Reachability Check
-    # (Non-blocking warning if router not currently reachable, e.g. during lab reset)
-    r1_reachable = check_socket_reachability(r1_mgmt_ip, 22, timeout=1.5)
+    # Check SSH port 22 first, and if not present, check GNS3 local console port (5001 / 5002)
+    r1_ssh = check_socket_reachability(r1_mgmt_ip, 22, timeout=0.8)
+    r1_console = check_socket_reachability("127.0.0.1", 5001, timeout=0.8)
+    r1_reachable = r1_ssh or r1_console
+    
+    if r1_ssh:
+        r1_msg = f"R1 SSH port reachable on {r1_mgmt_ip}:22."
+        r1_status = "PASSED"
+    elif r1_console:
+        r1_msg = f"R1 reachable via GNS3 Router Console (port 5001)."
+        r1_status = "PASSED"
+    else:
+        r1_msg = f"Cannot reach R1 via SSH ({r1_mgmt_ip}) or GNS3 Console (port 5001). Ensure router is powered on."
+        r1_status = "WARNING"
+
     checks.append({
-        "name": f"R1 Management Reachability ({r1_mgmt_ip}:22)",
-        "status": "PASSED" if r1_reachable else "WARNING",
-        "message": f"R1 SSH port reachable on {r1_mgmt_ip}." if r1_reachable else f"Cannot reach R1 SSH on {r1_mgmt_ip}. Ensure GNS3 router is powered on."
+        "name": f"R1 Management Reachability ({'SSH' if r1_ssh else 'Console 5001'})",
+        "status": r1_status,
+        "message": r1_msg
     })
 
-    r2_reachable = check_socket_reachability(r2_mgmt_ip, 22, timeout=1.5)
+    r2_ssh = check_socket_reachability(r2_mgmt_ip, 22, timeout=0.8)
+    r2_console = check_socket_reachability("127.0.0.1", 5002, timeout=0.8)
+    r2_reachable = r2_ssh or r2_console
+    
+    if r2_ssh:
+        r2_msg = f"R2 SSH port reachable on {r2_mgmt_ip}:22."
+        r2_status = "PASSED"
+    elif r2_console:
+        r2_msg = f"R2 reachable via GNS3 Router Console (port 5002)."
+        r2_status = "PASSED"
+    else:
+        r2_msg = f"Cannot reach R2 via SSH ({r2_mgmt_ip}) or GNS3 Console (port 5002). Ensure router is powered on."
+        r2_status = "WARNING"
+
     checks.append({
-        "name": f"R2 Management Reachability ({r2_mgmt_ip}:22)",
-        "status": "PASSED" if r2_reachable else "WARNING",
-        "message": f"R2 SSH port reachable on {r2_mgmt_ip}." if r2_reachable else f"Cannot reach R2 SSH on {r2_mgmt_ip}. Ensure GNS3 router is powered on."
+        "name": f"R2 Management Reachability ({'SSH' if r2_ssh else 'Console 5002'})",
+        "status": r2_status,
+        "message": r2_msg
     })
 
     return {

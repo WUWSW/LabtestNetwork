@@ -1,0 +1,149 @@
+2026-11-19 14:39:27,437 [INFO] (Worker) Starting Python Automation Worker...
+2026-11-19 14:39:27,438 [INFO] (Worker) Kafka Bootstrap: localhost:9092, Topic: network-config-jobs, Group: network-worker-group
+2026-11-19 14:39:27,439 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:27,440 [INFO] (Worker) Probing node bootstrap-0 broker version
+2026-11-19 14:39:27,440 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:27,542 [ERROR] (Worker) Error sending request data to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
+Traceback (most recent call last):
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 752, in send_pending_requests
+    total_bytes = self._send_bytes_blocking(data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 574, in _send_bytes_blocking
+    sent_bytes = self._sock.send(data[total_sent:])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-11-19 14:39:27,544 [ERROR] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: [Errno 32] Broken pipe
+2026-11-19 14:39:27,545 [WARNING] (Worker) Kafka Consumer connection error: Invalid file object: None. Retrying in 5 seconds...
+2026-11-19 14:39:32,546 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:32,547 [INFO] (Worker) Probing node bootstrap-0 broker version
+2026-11-19 14:39:32,547 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:32,648 [ERROR] (Worker) Error sending request data to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
+Traceback (most recent call last):
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 752, in send_pending_requests
+    total_bytes = self._send_bytes_blocking(data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 574, in _send_bytes_blocking
+    sent_bytes = self._sock.send(data[total_sent:])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-11-19 14:39:32,649 [ERROR] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: [Errno 32] Broken pipe
+2026-11-19 14:39:32,650 [WARNING] (Worker) Kafka Consumer connection error: Invalid file object: None. Retrying in 5 seconds...
+2026-11-19 14:39:37,652 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:37,653 [INFO] (Worker) Probing node bootstrap-0 broker version
+2026-11-19 14:39:37,653 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:37,754 [ERROR] (Worker) Error sending request data to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
+Traceback (most recent call last):
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 752, in send_pending_requests
+    total_bytes = self._send_bytes_blocking(data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 574, in _send_bytes_blocking
+    sent_bytes = self._sock.send(data[total_sent:])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionResetError: [Errno 104] Connection reset by peer
+2026-11-19 14:39:37,755 [ERROR] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: [Errno 104] Connection reset by peer
+2026-11-19 14:39:37,755 [WARNING] (Worker) Kafka Consumer connection error: Invalid file object: None. Retrying in 5 seconds...
+2026-11-19 14:39:42,756 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:42,757 [INFO] (Worker) Probing node bootstrap-0 broker version
+2026-11-19 14:39:42,757 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:42,857 [ERROR] (Worker) Error sending request data to <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>
+Traceback (most recent call last):
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 752, in send_pending_requests
+    total_bytes = self._send_bytes_blocking(data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gus/Desktop/Lab test Network/venv/lib/python3.12/site-packages/kafka/conn.py", line 574, in _send_bytes_blocking
+    sent_bytes = self._sock.send(data[total_sent:])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe
+2026-11-19 14:39:42,858 [ERROR] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. KafkaConnectionError: <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: [Errno 32] Broken pipe
+2026-11-19 14:39:42,858 [WARNING] (Worker) Kafka Consumer connection error: Invalid file object: None. Retrying in 5 seconds...
+2026-11-19 14:39:47,858 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:47,859 [INFO] (Worker) Probing node bootstrap-0 broker version
+2026-11-19 14:39:47,859 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:47,964 [INFO] (Worker) Broker version identified as 2.6.0
+2026-11-19 14:39:47,964 [INFO] (Worker) Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+2026-11-19 14:39:47,965 [INFO] (Worker) Updating subscribed topics to: ('network-config-jobs',)
+2026-11-19 14:39:47,965 [INFO] (Worker) Successfully connected Kafka Consumer. Listening for jobs...
+2026-11-19 14:39:47,970 [INFO] (Worker) Group coordinator for network-worker-group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=9092, rack=None)
+2026-11-19 14:39:47,970 [INFO] (Worker) Discovered coordinator coordinator-1 for group network-worker-group
+2026-11-19 14:39:47,970 [INFO] (Worker) Starting new heartbeat thread
+2026-11-19 14:39:47,971 [INFO] (Worker) Revoking previously assigned partitions set() for group network-worker-group
+2026-11-19 14:39:47,971 [INFO] (Worker) <BrokerConnection node_id=coordinator-1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:47,972 [INFO] (Worker) <BrokerConnection node_id=coordinator-1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:47,972 [INFO] (Worker) <BrokerConnection node_id=bootstrap-0 host=localhost:9092 <connected> [IPv4 ('127.0.0.1', 9092)]>: Closing connection. 
+2026-11-19 14:39:48,072 [INFO] (Worker) (Re-)joining group network-worker-group
+2026-11-19 14:39:48,081 [INFO] (Worker) Elected group leader -- performing partition assignments using range
+2026-11-19 14:39:48,082 [INFO] (Worker) <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: connecting to localhost:9092 [('127.0.0.1', 9092) IPv4]
+2026-11-19 14:39:48,082 [INFO] (Worker) <BrokerConnection node_id=1 host=localhost:9092 <connecting> [IPv4 ('127.0.0.1', 9092)]>: Connection complete.
+2026-11-19 14:39:48,091 [INFO] (Worker) Successfully joined group network-worker-group with generation 6
+2026-11-19 14:39:48,091 [INFO] (Worker) Updated partition assignment: [TopicPartition(topic='network-config-jobs', partition=0)]
+2026-11-19 14:39:48,091 [INFO] (Worker) Setting newly assigned partitions {TopicPartition(topic='network-config-jobs', partition=0)} for group network-worker-group
+2026-11-19 14:40:13,386 [INFO] (Worker) ==> Received Job JOB-7e573f6a-R1-0e0c for R1 (192.168.122.111)
+2026-11-19 14:40:13,414 [INFO] (Worker) Re-checked approval for job JOB-7e573f6a-R1-0e0c: True
+2026-11-19 14:40:13,435 [INFO] (Worker) Updated backend job JOB-7e573f6a-R1-0e0c status to RUNNING
+2026-11-19 14:40:13,436 [INFO] (Worker) Starting Paramiko SSH deployment to R1 (192.168.122.111)...
+2026-11-19 14:40:17,440 [INFO] (Worker) Configuration successfully deployed to R1!
+2026-11-19 14:40:17,440 [INFO] (Worker) Checking OSPF verification on R1...
+2026-11-19 14:40:21,441 [INFO] (Worker) Running automated OSPF verification on R1 (192.168.122.111)...
+2026-11-19 14:40:27,904 [INFO] (Worker) === OSPF VERIFICATION REPORT FOR R1 (192.168.122.111) ===
+1. OSPF Neighbor FULL Adjacency: [PASSED] Neighbor state is FULL
+   - Expected Neighbor Router ID: 2.2.2.2 (Found)
+2. Remote LAN Learned via OSPF: [PASSED] Route to 10.2.0.0/24 present
+3. OSPF Process & Router-ID: [PASSED] OSPF 1 active with ID 1.1.1.1
+   - Passive Interface Configured: Yes
+Overall Verification Status: PASSED
+============================================================
+2026-11-19 14:40:27,918 [INFO] (Worker) Updated backend job JOB-7e573f6a-R1-0e0c status to SUCCESS
+2026-11-19 14:40:27,918 [INFO] (Worker) ==> Finished Job JOB-7e573f6a-R1-0e0c for R1. Verification: PASSED
+2026-11-19 14:40:27,922 [INFO] (Worker) Auto re-verifying 1 pending routers in proposal 7e573f6a...
+2026-11-19 14:40:39,439 [INFO] (Worker) ==> Received Job JOB-7e573f6a-R2-97a5 for R2 (192.168.122.102)
+2026-11-19 14:40:39,442 [INFO] (Worker) Re-checked approval for job JOB-7e573f6a-R2-97a5: True
+2026-11-19 14:40:39,463 [INFO] (Worker) Updated backend job JOB-7e573f6a-R2-97a5 status to RUNNING
+2026-11-19 14:40:39,463 [INFO] (Worker) Starting Paramiko SSH deployment to R2 (192.168.122.102)...
+2026-11-19 14:40:43,314 [INFO] (Worker) Configuration successfully deployed to R2!
+2026-11-19 14:40:43,314 [INFO] (Worker) Checking OSPF verification on R2...
+2026-11-19 14:40:47,314 [INFO] (Worker) Running automated OSPF verification on R2 (192.168.122.102)...
+2026-11-19 14:40:53,825 [INFO] (Worker) === OSPF VERIFICATION REPORT FOR R2 (192.168.122.102) ===
+1. OSPF Neighbor FULL Adjacency: [PASSED] Neighbor state is FULL
+   - Expected Neighbor Router ID: 1.1.1.1 (Found)
+2. Remote LAN Learned via OSPF: [PASSED] Route to 10.0.0.0/24 present
+3. OSPF Process & Router-ID: [PASSED] OSPF 1 active with ID 2.2.2.2
+   - Passive Interface Configured: Yes
+Overall Verification Status: PASSED
+============================================================
+2026-11-19 14:40:53,839 [INFO] (Worker) Updated backend job JOB-7e573f6a-R2-97a5 status to SUCCESS
+2026-11-19 14:40:53,839 [INFO] (Worker) ==> Finished Job JOB-7e573f6a-R2-97a5 for R2. Verification: PASSED
+2026-11-19 14:49:38,030 [INFO] (Worker) ==> Received Job JOB-02d0e626-R1-2a6e for R1 (192.168.122.111)
+2026-11-19 14:49:38,034 [INFO] (Worker) Re-checked approval for job JOB-02d0e626-R1-2a6e: True
+2026-11-19 14:49:38,052 [INFO] (Worker) Updated backend job JOB-02d0e626-R1-2a6e status to RUNNING
+2026-11-19 14:49:38,052 [INFO] (Worker) Starting Paramiko SSH deployment to R1 (192.168.122.111)...
+2026-11-19 14:49:42,057 [INFO] (Worker) Configuration successfully deployed to R1!
+2026-11-19 14:49:42,058 [INFO] (Worker) Checking OSPF verification on R1...
+2026-11-19 14:49:46,058 [INFO] (Worker) Running automated OSPF verification on R1 (192.168.122.111)...
+2026-11-19 14:49:52,512 [INFO] (Worker) === OSPF VERIFICATION REPORT FOR R1 (192.168.122.111) ===
+1. OSPF Neighbor FULL Adjacency: [PASSED] Neighbor state is FULL
+   - Expected Neighbor Router ID: 2.2.2.2 (Found)
+2. Remote LAN Learned via OSPF: [PASSED] Route to 10.2.0.0/24 present
+3. OSPF Process & Router-ID: [PASSED] OSPF 1 active with ID 1.1.1.1
+   - Passive Interface Configured: Yes
+Overall Verification Status: PASSED
+============================================================
+2026-11-19 14:49:52,526 [INFO] (Worker) Updated backend job JOB-02d0e626-R1-2a6e status to SUCCESS
+2026-11-19 14:49:52,526 [INFO] (Worker) ==> Finished Job JOB-02d0e626-R1-2a6e for R1. Verification: PASSED
+2026-11-19 14:49:52,530 [INFO] (Worker) Auto re-verifying 1 pending routers in proposal 02d0e626...
+2026-11-19 14:50:04,048 [INFO] (Worker) ==> Received Job JOB-02d0e626-R2-88a3 for R2 (192.168.122.102)
+2026-11-19 14:50:04,052 [INFO] (Worker) Re-checked approval for job JOB-02d0e626-R2-88a3: True
+2026-11-19 14:50:04,071 [INFO] (Worker) Updated backend job JOB-02d0e626-R2-88a3 status to RUNNING
+2026-11-19 14:50:04,071 [INFO] (Worker) Starting Paramiko SSH deployment to R2 (192.168.122.102)...
+2026-11-19 14:50:07,923 [INFO] (Worker) Configuration successfully deployed to R2!
+2026-11-19 14:50:07,923 [INFO] (Worker) Checking OSPF verification on R2...
+2026-11-19 14:50:11,923 [INFO] (Worker) Running automated OSPF verification on R2 (192.168.122.102)...
+2026-11-19 14:50:18,433 [INFO] (Worker) === OSPF VERIFICATION REPORT FOR R2 (192.168.122.102) ===
+1. OSPF Neighbor FULL Adjacency: [PASSED] Neighbor state is FULL
+   - Expected Neighbor Router ID: 1.1.1.1 (Found)
+2. Remote LAN Learned via OSPF: [PASSED] Route to 10.0.0.0/24 present
+3. OSPF Process & Router-ID: [PASSED] OSPF 1 active with ID 2.2.2.2
+   - Passive Interface Configured: Yes
+Overall Verification Status: PASSED
+============================================================
+2026-11-19 14:50:18,447 [INFO] (Worker) Updated backend job JOB-02d0e626-R2-88a3 status to SUCCESS
+2026-11-19 14:50:18,447 [INFO] (Worker) ==> Finished Job JOB-02d0e626-R2-88a3 for R2. Verification: PASSED
